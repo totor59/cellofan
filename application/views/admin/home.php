@@ -1,4 +1,20 @@
-  <!-- CONTENU -->
+<!-- MENU ADMIN -->
+<ul class="nav nav-tabs col-xs-12 col-sm-8 col-lg-9 pull-right">
+  <li role="presentation" class="pull-right"><a href="<?= base_url('admin/dashboard') ?>">Dashboard</a></li>
+  <li role="presentation" class="active pull-right"><a href="#">Home</a></li>
+  <li role="presentation" class="pull-right dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->username ?> <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="<?= base_url('login/logout')?>">D&eacute;connection</a></li>
+  </ul>
+</li>
+</ul>
+<!-- /MENU ADMIN -->
+  <div class="container main-content col-xs-12 col-sm-8 col-lg-9 pull-right">
+
+
+	<!-- CONTENU -->
 <div class="panel panel-default banner cartoon">
 <img class="img-responsive cartoon" src="<?= base_url('public/assets/img/banner.jpg')?>">
 </div>

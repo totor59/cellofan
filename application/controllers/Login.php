@@ -10,7 +10,7 @@ class Login extends CI_Controller {
 }
 
   public function index() {
-    $this->output->enable_profiler(TRUE);
+    // $this->output->enable_profiler(TRUE);
     $data['title'] = "Cellofan' - Login";
     $data['body'] = $this->load->view('login/login', '', TRUE);
     $this->load->view('login/template.php', $data);

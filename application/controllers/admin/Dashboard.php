@@ -5,14 +5,16 @@ class Dashboard extends MY_Controller {
 
   public function __construct() {
   parent::__construct();
-  $this->load->helper(array('form', 'url'));
+  $this->data['title'] = "Cellofan' - Dashboard";
+  $this->data['header'] = $this->load->view('admin/templates/dashboard-header', $this->data, TRUE);
+  $this->data['sidebar'] = $this->load->view('admin/templates/sidebar', '', TRUE);
+  $this->data['footer'] = $this->load->view('admin/templates/footer', '', TRUE);
 }
 
   public function index() {
-    $this->output->enable_profiler(TRUE);
-    $data['title'] = "Cellofan' - Dashboard";
-    $data['body'] = $this->load->view('admin/register', '', TRUE);
-    $this->load->view('admin/template.php', $data);
+    // $this->output->enable_profiler(TRUE);
+    $this->data['body'] = $this->load->view('admin/register', '', TRUE);
+    $this->load->view('template', $this->data);
   }
 
   public function add_user() {
@@ -23,6 +25,7 @@ class Dashboard extends MY_Controller {
     $email = $this->input->post('email');
     $this->Login_model->create_login($password, $username, $email);
     redirect('admin/dashboard');
-  endif;
+    endif;
   }
-  }
+
+}

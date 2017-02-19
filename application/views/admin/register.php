@@ -1,5 +1,21 @@
-<div class="col-xs-4 col-xs-offset-4">
+<!-- MENU ADMIN -->
+<ul class="nav nav-tabs col-xs-12 col-sm-8 col-lg-9 pull-right">
+  <li role="presentation" class="active pull-right"><a href="#">Dashboard</a></li>
+  <li role="presentation" class="pull-right"><a href="<?= base_url('admin/home') ?>">Home</a></li>
+  <li role="presentation" class="pull-right dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->username ?> <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="<?= base_url('login/logout')?>">D&eacute;connection</a></li>
+  </ul>
+</li>
+</ul>
+<!-- /MENU ADMIN -->
+  <div class="container main-content col-xs-12 col-sm-8 col-lg-9 pull-right">
 
+
+<!-- CONTENU -->
+<div class="col-sm-6">
 <div class="panel panel-default auth-panel">
   <div class="panel-heading">
     <h3 class="panel-title text-center sista">CREER UN UTILISATEUR</h3>
@@ -34,5 +50,4 @@
     <?php echo form_close() ?>
   </div>
 </div>
-
 </div>
