@@ -1,0 +1,214 @@
+/* ==========================================================================
+ *
+ * Template Name: Cellofan
+ * Description: Association website
+ * Language: French
+ * Version 1.0
+ *
+ * ========================================================================== */
+
+
+ /* ==========================================================================
+  * Fonts
+  * ========================================================================== */
+  @font-face {
+      font-family: 'LoveYaLikeASister';
+      src: url('../../third-party/fonts/LoveYaLikeASister.ttf') format("truetype");
+      font-weight: normal;
+  }
+  @font-face {
+      font-family: 'LoveYaLikeASister';
+      src: url('../../third-party/fonts/LoveYaLikeASisterSolid.ttf') format("truetype");
+      font-weight: bold;
+  }
+
+/* ==========================================================================
+ * Helper classes
+ * ========================================================================== */
+.cartoon {
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+.sista {
+  font-family: 'LoveYaLikeASister';
+  font-weight: bold;
+}
+.basiclink,
+.basiclink:active,
+.basiclink:hover,
+.basiclink:visited {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+  * Author's custom style
+  * ========================================================================== */
+.page-content,
+body,
+html {
+  min-height: 100%;
+}
+body {
+  position: relative;
+}
+
+/* ==========================================================================
+  * Navbar Mobile
+  * ========================================================================== */
+.navmobile {
+  color: #fff;
+  background-color: #000;
+}
+
+/* ==========================================================================
+  * Sidebar
+  * ========================================================================== */
+
+.sidebar {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  background-color: #000;
+  font-family: 'LoveYaLikeASister';
+  height: 100%;
+}
+.sidebar-wrapper {
+  background-color: #000;
+}
+.menu {
+  text-align:center;
+  padding: 0 20px;
+}
+.menu li {
+  list-style: none;
+  margin: 15px 0;
+
+}
+.menu li a {
+  color: #fff;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 0.5em;
+  transition: 0.5s;
+}
+.menu li .asso:hover,
+.menu li .asso:active {
+  color: blue;
+  border: 1px solid blue;
+  transition: 0.5s;
+}
+.menu li .activite:hover,
+.menu li .activite:active {
+  color: red;
+  border: 1px solid red;
+  transition: 0.5s;
+}
+.menu li .soutien:hover,
+.menu li .soutien:active {
+  color: orange;
+  border: 1px solid orange;
+  transition: 0.5s;
+}
+.social-bar {
+  height: 40px;
+}
+.social-bar a:focus,
+.social-bar a:visited,
+.social-bar a {
+  color: #fff;
+  transition: 0.5s;
+}
+.social-bar i {
+  border: 1px solid #fff;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 5px;
+  transition: 0.5s;
+  width: 38px;
+}
+.social-bar .fb:active i,
+.social-bar .fb:hover i {
+  color: #3B5998;
+  border: 1px solid #3B5998;
+  transition: 0.5s;
+}
+.social-bar .tw:active i,
+.social-bar .tw:hover i {
+  color: #1DA1F2;
+  border: 1px solid #1DA1F2;
+  transition: 0.5s;
+}
+.social-bar .yt:active i,
+.social-bar .yt:hover i {
+  color: #E62117;
+  border: 1px solid #E62117;
+  transition: 0.5s;
+}
+.agenda {
+  padding: 0 20px;
+}
+.agenda h2 {
+  text-align: center;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  font-family: 'LoveYaLikeASister';
+  font-size: 20px;
+  height: 40px;
+  padding-top: 5px;
+}
+.agenda ul {
+  padding: 5px 15px;
+}
+.agenda ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 13px;
+}
+.agenda .date {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.contact {
+  border: 1px solid #fff;
+  /*padding: 10%;*/
+  position: absolute;
+  bottom: 50px;
+}
+.contact ul {
+  padding: 15px;
+}
+.contact ul li {
+  list-style: none;
+}
+
+/* ==========================================================================
+  * Homepage content
+  * ========================================================================== */
+.main-content {
+  padding-bottom: 50px;
+}
+.hometitle {
+  margin: 25px 0;
+}
+.banner {
+    margin-top: 15px;
+}
+.postcard {
+  overflow: hidden;
+  padding: 0 !important;
+  /*border: 1px solid #333 !important;*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: relative;
+}
+.postcard .caption {
+  padding: 0 20px !important;
+}
+.pin {
+  height: 30px;
+  z-index: 1000;
+  position: absolute;
+  top: -5px;
+  left: calc(50% - 15px);
+}
