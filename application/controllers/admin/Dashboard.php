@@ -6,7 +6,7 @@ class Dashboard extends MY_Controller {
   public function __construct() {
   parent::__construct();
   $this->data['title'] = "Cellofan' - Dashboard";
-  $this->data['header'] = $this->load->view('admin/templates/dashboard-header', $this->data, TRUE);
+  $this->data['header'] = $this->load->view('admin/templates/header', $this->data, TRUE);
   $this->data['sidebar'] = $this->load->view('admin/templates/sidebar', '', TRUE);
   $this->data['footer'] = $this->load->view('admin/templates/footer', '', TRUE);
 }

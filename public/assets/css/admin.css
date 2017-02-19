@@ -1,0 +1,27 @@
+/* ==========================================================================
+ *
+ * Template Name: Cellofan
+ * Description: Association website
+ * Language: French
+ * Version 1.0
+ *
+ * ========================================================================== */
+
+
+ /* ==========================================================================
+  * Fonts
+  * ========================================================================== */
+  @font-face {
+      font-family: 'LoveYaLikeASister';
+      src: url('../../third-party/fonts/LoveYaLikeASister.ttf') format("truetype");
+      font-weight: normal;
+  }
+  @font-face {
+      font-family: 'LoveYaLikeASister';
+      src: url('../../third-party/fonts/LoveYaLikeASisterSolid.ttf') format("truetype");
+      font-weight: bold;
+  }
+
+/* ==========================================================================
+ * Helper classes
+ * ========================================================================== */
