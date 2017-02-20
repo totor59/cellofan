@@ -13,7 +13,7 @@ class Dashboard extends MY_Controller {
 
   public function index() {
     // $this->output->enable_profiler(TRUE);
-    $this->data['body'] = $this->load->view('admin/register', '', TRUE);
+    $this->data['body'] = $this->load->view('admin/dashboard', '', TRUE);
     $this->load->view('template', $this->data);
   }
 
