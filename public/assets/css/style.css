@@ -38,6 +38,12 @@
 .basiclink:visited {
   text-decoration: none;
 }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 
 /* ==========================================================================
   * Author's custom style
@@ -72,13 +78,11 @@ iframe[seamless] {
   * ========================================================================== */
 
 .sidebar {
-  position: absolute !important;
   top: 0;
   bottom: 0;
   color: #fff;
   background-color: #000;
   font-family: 'LoveYaLikeASister';
-  height: 100%;
 }
 .sidebar-wrapper {
   background-color: #000;
@@ -209,6 +213,13 @@ iframe[seamless] {
   /*border: 1px solid #333 !important;*/
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
+  /*height: 30%;*/
+}
+.thumb {
+  height: auto;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .postcard .caption {
   padding: 0 20px !important;

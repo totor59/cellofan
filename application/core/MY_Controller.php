@@ -8,6 +8,7 @@ class MY_Controller extends CI_Controller {
     parent::__construct();
     $this->load->helper(array('form', 'url'));
     $this->load->library('Authentification');
+    $this->load->library('form_validation');
     $this->authentification->check();
 }
 

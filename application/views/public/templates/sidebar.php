@@ -20,8 +20,8 @@
 </nav>
 <!-- /MOBILE -->
 
-<div class="container-fluid page-content">
-<div class="row">
+<div class="container page-content">
+<div class="row row-eq-height">
 
   <!-- SIDEBAR -->
   <div class="sidebar hidden-xs col-sm-4 col-lg-3">

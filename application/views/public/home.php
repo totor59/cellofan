@@ -1,6 +1,6 @@
   <!-- CONTENU -->
-<div class="panel panel-default banner cartoon">
-<img class="img-responsive cartoon" src="<?= base_url('public/assets/img/banner.jpg')?>">
+<div class="panel panel-default banner">
+<img class="img-responsive" src="<?= base_url('public/assets/img/banner.jpg')?>">
 </div>
 
 <div class="col-xs-12 presentation">
