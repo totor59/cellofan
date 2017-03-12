@@ -250,3 +250,17 @@ iframe[seamless] {
   top: -5px;
   left: calc(50% - 15px);
 }
+
+/* ==========================================================================
+  * Pages
+  * ========================================================================== */
+.page-section img {
+  width: 100% !important;
+  height: auto !important;
+}
+.page-section {
+    padding: 15px;
+}
+.page-section * {
+    text-align: justify;
+}

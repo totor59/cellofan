@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends MY_Controller {
+class Home extends MY_Admin_Controller {
 	public function __construct() {
 	 parent::__construct();
 	 // Models
@@ -19,7 +19,7 @@ class Home extends MY_Controller {
 		// $this->output->enable_profiler(TRUE);
 		$config['base_url'] = base_url('admin/home/index/');
 		$config['total_rows'] = $this->Post_model->get_count();
-		$config['per_page'] = 1;
+		$config['per_page'] = 5;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
 
@@ -42,7 +42,7 @@ class Home extends MY_Controller {
 		 'posts' => $this->data['posts'],
 		);
 
-		var_dump($this->data['posts']);
+		// var_dump($this->data['posts']);
 		$this->data['body'] = $this->parser->parse('admin/home', $this->template, TRUE);
 		$this->load->view('template', $this->data);
 	}

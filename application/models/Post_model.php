@@ -55,7 +55,6 @@ class Post_model extends CI_Model {
       'description' => $post->description,
       'content' => $post->content,
       'thumbnail' => $post->thumbnail,
-      'is_active' => 0
     );
       $this->db->insert($this->table, $data);
   }

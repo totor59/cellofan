@@ -22,6 +22,9 @@
       font-weight: bold;
   }
 
+.relative {
+  position: relative;
+}
 /* ==========================================================================
  * Author's custom styles
  * ========================================================================== */
@@ -50,6 +53,11 @@
     position: absolute !important;
     right: 16px;
     top: 1px;
+}
+.page-settings {
+    position: absolute !important;
+    right: 0;
+    top: 0;
 }
 .settings .btn {
   padding: 5px 5px;

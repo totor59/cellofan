@@ -18,7 +18,22 @@ array(
       'field' => 'description',
 ),
 
-)
+),
+
+
+  'page' => array(
+array(
+      'field' => 'title',
+      'rules' => 'required',
+      'errors' => array(
+              'required' => "Vous devez renseigner un titre &agrave; votre page.",
+      ),
+),
+array(
+      'field' => 'content',
+),
+
+),
 
 
 

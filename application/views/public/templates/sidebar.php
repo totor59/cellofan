@@ -28,7 +28,7 @@
     <div class="sidebar-wrapper">
     <img class="img-responsive" src="<?= base_url('public/assets/img/logo.png')?>">
     <ul class="menu">
-      <li><a href="#" class="basiclink asso">L'asso</a></li>
+      <li><a href="<?= base_url('asso') ?>" class="basiclink asso">L'asso</a></li>
       <li><a href="#" class="basiclink activite">Activites</a></li>
       <li><a href="#" class="basiclink soutien">Nous soutenir</a></li>
     </ul>

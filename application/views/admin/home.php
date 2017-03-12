@@ -48,7 +48,7 @@
   </button>
   <ul class="dropdown-menu">
     <li><a href="<?= base_url('admin/posts/edit/{id}')?>"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Editer</a></li>
-    <li><a href="#" data-toggle="modal" data-target="#deletePost"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>Supprimer</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#deletePost{id}"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>Supprimer</a></li>
     <li><a href="{publish}"><i class="fa fa-fw {button}" aria-hidden="true"></i>Publier</a></li>
   </ul>
 </div>
@@ -68,7 +68,7 @@
   </div>
 
   <!-- Modal -->
-<div class="modal fade" id="deletePost" tabindex="-1" role="dialog" aria-labelledby="delete">
+<div class="modal fade" id="deletePost{id}" tabindex="-1" role="dialog" aria-labelledby="delete">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
