@@ -17,9 +17,16 @@ class Home extends MY_Controller {
 
 	public function index()	{
 		// $this->output->enable_profiler(TRUE);
-		$query = $this->Post_model->get_posts();
+		$config['base_url'] = base_url('admin/home/index/');
+		$config['total_rows'] = $this->Post_model->get_count();
+		$config['per_page'] = 1;
+		$config['uri_segment'] = 4;
+		$this->pagination->initialize($config);
+
+		$query = $this->Post_model->get_posts($config['per_page'], $this->uri->segment(4));
 		$this->data['posts'] = $query->result();
-		$this->data['count'] = $query->num_rows();
+
+
 		foreach($this->data['posts'] as $post):
 			if($post->is_active == 0):
 				$post->status = 'red';
@@ -31,17 +38,12 @@ class Home extends MY_Controller {
 			$post->publish = base_url('admin/posts/publish/'.$post->id);
 			$post->view = base_url('admin/view/post/'.$post->slug);
 		endforeach;
-		var_dump($this->data['posts']);
-		// $config['base_url'] = base_url('admin/home/');
-		// $config['total_rows'] = $this->data['count'];
-		// $config['per_page'] = 1;
-		// $config['uri_segment'] = 3;
 		$this->template = array(
-     'posts' => $this->data['posts'],
-    );
-		// $this->pagination->initialize($config);
+		 'posts' => $this->data['posts'],
+		);
+
+		var_dump($this->data['posts']);
 		$this->data['body'] = $this->parser->parse('admin/home', $this->template, TRUE);
-		// $this->data['body'] = $this->load->view('admin/home', $this->data, TRUE);
 		$this->load->view('template', $this->data);
 	}
 }

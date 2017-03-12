@@ -6,19 +6,34 @@ class Post_model extends CI_Model {
 
   private $table = 'cello_post';
 
-  public function get_posts() {
-  return $this->db
-              ->select('*')
-              ->from($this->table)
-              ->order_by('date', 'DESC')
-              ->get();
+  public function get_count() {
+    return $this->db->count_all($this->table);
   }
 
-  public function get_public_posts() {
+  public function get_public_count() {
   return $this->db
               ->select('*')
               ->from($this->table)
               ->where('is_active', 1)
+              ->get()
+              ->num_rows();
+  }
+
+  public function get_posts($limit, $offset) {
+  return $this->db
+              ->select('*')
+              ->from($this->table)
+              ->limit($limit, $offset)
+              ->order_by('date', 'DESC')
+              ->get();
+  }
+
+  public function get_public_posts($limit, $offset) {
+  return $this->db
+              ->select('*')
+              ->from($this->table)
+              ->where('is_active', 1)
+              ->limit($limit, $offset)
               ->order_by('date', 'DESC')
               ->get();
   }

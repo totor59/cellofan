@@ -14,6 +14,8 @@
 
 <!-- POSTS -->
 <div class="row">
+
+
 	<div class="col-xs-12">
 		<h1 class="sista text-center hometitle">Actualit&eacute;s</h1>
 	</div>
@@ -94,69 +96,20 @@ Voulez vous supprimer definitivement cet article ?
   {/posts}
 
 
-	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
-		<div class="thumbnail postcard">
-			<a href="#" class="basiclink">
-			<img src="<?= base_url('public/assets/img/image3.jpg')?>" alt="..." class="thumb">
-			<div class="caption">
-				<h3 class="sista">Thumbnail label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			</a>
-		</div>
-	</div>
+  <!-- PAGINATION -->
+  <div class="pagination col-xs-12 text-center">
+  	<div class="">
+  <?php echo $this->pagination->create_links(); ?>
+  	</div>
 
-	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
-		<div class="thumbnail postcard">
-			<a href="#" class="basiclink">
-			<img src="<?= base_url('public/assets/img/image4.jpg')?>" alt="..." class="thumb">
-			<div class="caption">
-				<h3 class="sista">Thumbnail label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			</a>
-		</div>
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
-		<div class="thumbnail postcard">
-			<a href="#" class="basiclink">
-			<img src="<?= base_url('public/assets/img/image5.jpg')?>" alt="..." class="thumb">
-			<div class="caption">
-				<h3 class="sista">Thumbnail label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			</a>
-		</div>
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
-		<div class="thumbnail postcard">
-			<a href="#" class="basiclink">
-			<img src="<?= base_url('public/assets/img/image6.jpg')?>" alt="..." class="thumb">
-			<div class="caption">
-				<h3 class="sista">Thumbnail label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			</a>
-		</div>
-	</div>
-</div>
+</div>  <!-- row -->
 
 <!-- POSTS -->
 
 </div>
 
 
-<!-- PAGINATION -->
-<div class="pagination">
-	<div class="">
 
-	</div>
 
 
 <!-- CONTENU -->

@@ -42,6 +42,9 @@
 .createcard .caption {
    padding-top: 35% !important;
 }
+.createcard .caption h3 {
+  margin: 30px 0;
+}
 .settings {
     z-index: 1000;
     position: absolute !important;
