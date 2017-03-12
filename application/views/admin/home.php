@@ -1,22 +1,6 @@
 
 
   <div class="container main-content col-xs-12 col-sm-8 col-md-9 col-lg-9 pull-right">
-    <!-- MENU ADMIN -->
-    <ul class="nav nav-tabs col-xs-12 pull-right">
-        <li role="presentation" class="pull-right"><a href="<?= base_url('admin/posts/create_posts') ?>">Ecrire post</a></li>
-      <li role="presentation" class="pull-right"><a href="<?= base_url('admin/dashboard') ?>">Dashboard</a></li>
-      <li role="presentation" class="active pull-right"><a href="<?= base_url('admin/home') ?>">Home</a></li>
-      <li role="presentation" class="pull-right dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <?= $this->session->username ?> <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="<?= base_url('login/logout')?>"><i class="fa fa-sign-out" aria-hidden="true"></i>
-     D&eacute;connection</a></li>
-      </ul>
-    </li>
-    </ul>
-    <!-- /MENU ADMIN -->
-
 	<!-- CONTENU -->
 <div class="panel panel-default banner">
 <img class="img-responsive" src="<?= base_url('public/assets/img/banner.jpg')?>">
@@ -54,17 +38,61 @@
 {posts}
 	<div class="col-xs-12 col-sm-6 col-lg-4">
 			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
+      <div class="btn-group pull-right settings">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-power-off fa-fw fa-lg {status}" aria-hidden="true"></i>
+    <i class="fa fa-cog fa-fw fa-lg" aria-hidden="true"></i>
+<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="<?= base_url('admin/posts/edit/{id}')?>"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Editer</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#deletePost"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>Supprimer</a></li>
+    <li><a href="{publish}"><i class="fa fa-fw {button}" aria-hidden="true"></i>Publier</a></li>
+  </ul>
+</div>
     <div class="thumbnail postcard">
-			<!-- <a href="#" class="basiclink"> -->
+			<a href="{view}" class="basiclink">
+      <div class="thumbwrap">
       <img src="{thumbnail}" alt="..." class="img-responsive">
+    </div>
+    <div class="captionwrap">
       <div class="caption">
         <h3 class="sista">{title}</h3>
-        <p>{description}</p>
+        <p>{description}<strong>[ ... Lire la suite ]</strong></p>
       </div>
-			<!-- </a> -->
+    </div>
+			</a>
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="deletePost" tabindex="-1" role="dialog" aria-labelledby="delete">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="alert alert-danger" role="alert">
+          <h4 class="text-center">
+            <span class="fa-stack fa-lg">
+  <i class="fa fa-circle-o fa-stack-2x"></i>
+  <i class="fa fa-exclamation fa-stack-1x"></i>
+</span>
+<strong>
+Voulez vous supprimer definitivement cet article ?
+</strong>
+</h4>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <form class="" action="<?= base_url('admin/posts/delete/') ?>{id}" method="post">
+        <button type="submit" class="btn btn-danger">OUI</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">NON</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   {/posts}
+
 
 	<div class="col-xs-12 col-sm-6 col-lg-4">
 			<img src="<?= base_url('public/assets/img/pin-icon.png')?>" alt="..." class="pin">
@@ -117,9 +145,8 @@
 			</a>
 		</div>
 	</div>
-
-
 </div>
+
 <!-- POSTS -->
 
 </div>

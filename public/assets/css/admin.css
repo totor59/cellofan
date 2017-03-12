@@ -25,7 +25,35 @@
 /* ==========================================================================
  * Author's custom styles
  * ========================================================================== */
+.red {
+  color: #e52620;
+}
+.green {
+  color: #57bf02;
+}
+.navcontainer {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 .create-panel {
   padding: 30px;
   margin: 50px 0 500px 0 !important;
+}
+.createcard .caption {
+   padding-top: 35% !important;
+}
+.settings {
+    z-index: 1000;
+    position: absolute !important;
+    right: 16px;
+    top: 1px;
+}
+.settings .btn {
+  padding: 5px 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+ul .fa-fw {
+  margin-right: 10px;
 }

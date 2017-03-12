@@ -213,7 +213,7 @@ iframe[seamless] {
   /*border: 1px solid #333 !important;*/
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
-  /*height: 30%;*/
+  height: 400px;
 }
 .thumb {
   height: auto;
@@ -221,8 +221,27 @@ iframe[seamless] {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.thumbwrap {
+  height: 45%;
+  overflow: hidden;
+}
+.captionwrap {
+  height: 55%;
+  padding: 15px 0;
+}
+.caption h3 {
+  height: 25%;
+  margin-top: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.caption p {
+  text-align: justify;
+  margin-top: 20px;
+}
 .postcard .caption {
   padding: 0 20px !important;
+  height: 100%;
 }
 .pin {
   height: 30px;

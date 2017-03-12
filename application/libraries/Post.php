@@ -22,7 +22,7 @@ class Post {
   public function excerpt($post) {
     if($post):
     $xpath = new DOMXPath(@DOMDocument::loadHTML($post));
-    $excerpt = (substr(strip_tags($xpath->evaluate("string(//p)")), 0, 140) ?: NULL);
+    $excerpt = (substr(strip_tags($xpath->evaluate("string(//p)")), 0, 150) ?: NULL);
       return $excerpt;
     endif;
   }

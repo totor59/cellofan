@@ -9,7 +9,7 @@
   <div class="panel panel-default create-panel">
     <h1>Cr&eacute;er un nouveau post</h1>
   <div class="panel-body">
-    <?= form_open('admin/posts/create_post') ?>
+    <?= form_open('admin/posts/create') ?>
     <div class="form-group">
         <?= form_error('title') ?>
     <label for="title">Titre</label>
@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" name="description" placeholder="Facultatif. Maxi -??? caracteres"><?= set_value('description'); ?></textarea>
+    <textarea class="form-control" name="description" maxlength="150" placeholder="Facultatif. Maxi -??? caracteres"><?= set_value('description'); ?></textarea>
     </div>
     <div class="form-group">
     <label for="content">Contenu de l'article</label>
