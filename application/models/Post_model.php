@@ -2,9 +2,9 @@
 /**
  *  Post_model
  */
-class Post_model extends CI_Model {
+class Post_model extends MY_Model {
 
-  private $table = 'cello_post';
+  protected $table = 'cello_post';
 
   public function get_count() {
     return $this->db->count_all($this->table);
@@ -19,7 +19,7 @@ class Post_model extends CI_Model {
               ->num_rows();
   }
 
-  public function get_posts($limit, $offset) {
+  public function get_posts($limit = NULL, $offset = NULL) {
   return $this->db
               ->select('*')
               ->from($this->table)
@@ -48,35 +48,35 @@ class Post_model extends CI_Model {
                 ->result();
   }
 
-  public function create($post)  {
-    $data = array(
-      'title' => $post->title,
-      'slug' => $post->slug,
-      'description' => $post->description,
-      'content' => $post->content,
-      'thumbnail' => $post->thumbnail,
-    );
-      $this->db->insert($this->table, $data);
-  }
-
-  public function edit($post_id, $post)  {
-    $data = array(
-      'title' => $post->title,
-      'slug' => $post->slug,
-      'description' => $post->description,
-      'content' => $post->content,
-      'thumbnail' => $post->thumbnail,
-      'is_active' => 0
-    );
-      $this->db
-      ->where('id', $post_id)
-      ->update($this->table, $data);
-  }
-
-  public function delete($post_id)  {
-  $this->db->where('id',$post_id)
-           ->delete($this->table);
-}
+//   public function create($post)  {
+//     $data = array(
+//       'title' => $post->title,
+//       'slug' => $post->slug,
+//       'description' => $post->description,
+//       'content' => $post->content,
+//       'thumbnail' => $post->thumbnail,
+//     );
+//       $this->db->insert($this->table, $data);
+//   }
+//
+//   public function edit($post_id, $post)  {
+//     $data = array(
+//       'title' => $post->title,
+//       'slug' => $post->slug,
+//       'description' => $post->description,
+//       'content' => $post->content,
+//       'thumbnail' => $post->thumbnail,
+//       'is_active' => 0
+//     );
+//       $this->db
+//       ->where('id', $post_id)
+//       ->update($this->table, $data);
+//   }
+//
+//   public function delete($post_id)  {
+//   $this->db->where('id',$post_id)
+//            ->delete($this->table);
+// }
 
   public function publish($id)  {
     if($this->db->select('is_active')->from($this->table)->where('id', $id)->get()->row()->is_active == 0):

@@ -13,15 +13,15 @@ class Home extends MY_Public_Controller {
 }
 
 public function index()	{
-	// $this->output->enable_profiler(TRUE);
+	$this->output->enable_profiler(TRUE);
 	$config['base_url'] = base_url('home/index/');
-	$config['total_rows'] = $this->Post_model->get_public_count();
+	$config['total_rows'] = $this->Post_model->count(array('is_active' => 1));
 	$config['per_page'] = 6;
 	$config['uri_segment'] = 3;
 	$this->pagination->initialize($config);
 
-	$query = $this->Post_model->get_public_posts($config['per_page'], $this->uri->segment(3));
-	$this->data['posts'] = $query->result();
+	$query = $this->Post_model->read('*', array('is_active' => 1), $config['per_page'], $this->uri->segment(3) );
+	$this->data['posts'] = $query;
 
 	$this->template = array(
 	 'posts' => $this->data['posts'],
@@ -32,4 +32,6 @@ public function index()	{
 	$this->data['body'] = $this->parser->parse('public/home', $this->template, TRUE);
 	$this->load->view('template', $this->data);
 }
+
+
 }

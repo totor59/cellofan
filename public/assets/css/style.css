@@ -84,6 +84,9 @@ iframe[seamless] {
   background-color: #000;
   font-family: 'LoveYaLikeASister';
 }
+.sidebar label {
+  color: #000;
+}
 .sidebar-wrapper {
   background-color: #000;
 }
@@ -155,9 +158,6 @@ iframe[seamless] {
   color: #E62117;
   border: 1px solid #E62117;
   transition: 0.5s;
-}
-.agenda {
-  padding: 0 20px;
 }
 .agenda h2 {
   text-align: center;

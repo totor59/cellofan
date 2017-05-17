@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Post {
 
+  public $thumbnail;
+
   public function __construct() {
     $this->CI =& get_instance();
     $this->CI->load->helper('text');
@@ -15,7 +17,6 @@ class Post {
       $post->content = ($data['content'] ?: NULL );
       $post->description = ((htmlspecialchars($data['description'])) ?: $this->excerpt($data['content']) ?: NULL);
       $post->thumbnail = $this->thumbnail($post->content, $post->slug);
-      $post->slug = url_title($post->title, 'dash', TRUE);
       return $post;
   }
 

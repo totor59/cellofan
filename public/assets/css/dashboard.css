@@ -1,0 +1,84 @@
+/* ==========================================================================
+ * Fonts
+ * ========================================================================== */
+@font-face {
+    font-family: 'Lato';
+    src: url('../../third-party/fonts/Lato-Regular.ttf') format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../third-party/fonts/Roboto-Regular.ttf') format("truetype");
+    font-weight: normal;
+}
+/* ==========================================================================
+ * Helpers
+ * ========================================================================== */
+.lato {
+  font-family: 'Lato';
+}
+.red {
+  color: #e52620;
+}
+.green {
+  color: #57bf02;
+}
+/* ==========================================================================
+ * Général
+ * ========================================================================== */
+ body {
+   font-family: 'Roboto' !important;
+ }
+ /* ==========================================================================
+  * Menu
+  * ========================================================================== */
+.navbar-brand > img {
+    height: 100%;
+}
+.navbar-brand {
+  padding: 5px 15px !important;
+}
+/* ==========================================================================
+ * Contenu
+ * ========================================================================== */
+.list-group-item {
+  height: 175px;
+}
+.list-group-item:hover {
+  background-color: #f5f5f5;
+}
+.thumbwrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.postgroup {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+.alert-info h4 {
+  line-height: 27px;
+  margin: 0;
+}
+.controls li {
+  list-style: none;
+}
+.controls li:not(:first-child) {
+  margin-top: 20px;
+}
+.btn-newpost {
+  margin-top: 20px;
+}
+/* ==========================================================================
+ * Desktop
+ * ========================================================================== */
+@media screen and (min-width: 994px) {
+  .controls {
+    margin-top: 30px;
+  }
+  .controls li {
+    display: inline-block;
+  }
+  .controls li:not(:first-child) {
+    margin-top: 0;
+  }
+}

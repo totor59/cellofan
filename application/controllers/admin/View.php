@@ -13,7 +13,7 @@ class View extends MY_Admin_Controller
         $this->data['footer'] = $this->load->view('admin/templates/footer', '', true);
     }
 
-    public function post($slug) {
+    public function index($slug) {
         // $this->output->enable_profiler(true);
         $this->data['post'] = $this->Post_model->get_post('slug', $slug);
         if ((!$this->data['post'])) {

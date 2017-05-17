@@ -26,7 +26,7 @@
 <div class="row row-eq-height">
   <!-- SIDEBAR -->
   <div class="sidebar hidden-xs col-sm-4 col-md-3 col-lg-3">
-    <div class="sidebar-wrapper">
+    <div class="row">
     <img class="img-responsive" src="<?= base_url('public/assets/img/logo-detail.png')?>">
     <ul class="menu">
       <li><a href="<?= base_url('admin/asso') ?>" class="basiclink asso">L'asso</a></li>
@@ -47,6 +47,38 @@
     <div class="agenda">
       <h2>AGENDA</h2>
       <ul>
+        <!-- creation event -->
+        <li>
+          <div class="panel panel-default">
+            <div class="panel-heading">Nouvel Evenement</div>
+            <div class="panel-body">
+              <?= form_open('admin/posts/create_event'); ?>
+              <!-- <div class="alert alert-danger" role="alert">...</div> -->
+              <div class="form-group">
+
+                <label for="date">Date</label>
+                <input type="text" name="date" id="datepicker" class="form-control" value="<?= set_value("date") ?>">
+            </div>
+                  <!-- <input type="date" id="datepicker" class="form-control" name="date" placeholder="Date"> -->
+
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control" rows="2" name="description"></textarea>
+              </div>
+              <div class="form-group">
+
+                <label for="link">Linker l'evenement</label>
+                <input type="text" name="link" class="form-control" value="<?= set_value("date") ?>">
+            </div>
+              <button type="submit" class="btn btn-default btn-block">Submit</button>
+              <?= form_close() ?>
+              <br>
+            </div>
+          </div>
+          </div>
+        <!-- ?creation event -->
+
+        </li>
         <li>
           <h3 class="date">JEUDI 27 SEPT. </h3>
           <span class="excerpt">Projection Manolo a St So de 20h a 23h</span>
@@ -74,6 +106,5 @@
         <li>cellofan.asso@gmail.com</li>
       </ul>
     </div>
-  </div>
   </div>
   <!-- SIDEBAR -->

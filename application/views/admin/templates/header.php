@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<?php echo base_url() . 'public/assets/css/style.css';?>">
 <link rel="stylesheet" href="<?php echo base_url() . 'public/assets/css/admin.css';?>">
 <link rel="stylesheet" href="<?php echo base_url() . 'public/third-party/css/bootstrap.min.css';?>">
+<link rel="stylesheet" href="<?php echo base_url() . 'public/third-party/css/jquery-ui.min.css';?>">
 <link rel="stylesheet" href="<?php echo base_url() . 'public/third-party/css/font-awesome.min.css';?>">
 <script src="<?= base_url() . 'public/third-party/ckeditor/ckeditor.js';?>"></script>
 </head>
