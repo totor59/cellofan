@@ -6,19 +6,27 @@ class Posts extends MY_Admin_Controller {
   public function __construct() {
 	 parent::__construct();
    $this->load->model('Post_model');
+   $this->load->library('pagination');
 	 $this->header[0]['title'] = "Cellofan' - Admin";
    $this->header[0]['posts'] = "active";
    $header = array(
     'header' => $this->header,
    );
-   $this->data['header'] = $this->parser->parse('admin2/templates/header', $header, TRUE);
+   $this->data['header'] = $this->parser->parse('admin/templates/header', $header, TRUE);
    $this->data['sidebar'] = NULL;
-   $this->data['footer'] = $this->load->view('admin2/templates/footer', '', TRUE);
+   $this->data['footer'] = $this->load->view('admin/templates/footer', '', TRUE);
 }
 
 	public function index()	{
-  		$query = $this->Post_model->get_posts(NULL, NULL);
-  		$this->data['posts'] = $query->result();
+    // $this->output->enable_profiler(TRUE);
+		$config['base_url'] = base_url('admin/posts/index/');
+		$config['total_rows'] = $this->Post_model->get_count();
+		$config['per_page'] = 5;
+		$config['uri_segment'] = 4;
+		$this->pagination->initialize($config);
+
+		$query = $this->Post_model->get_posts($config['per_page'], $this->uri->segment(4));
+		$this->data['posts'] = $query->result();
 
 
   		foreach($this->data['posts'] as $post):
@@ -34,7 +42,7 @@ class Posts extends MY_Admin_Controller {
   		 'posts' => $this->data['posts'],
   		);
 
-  		$this->data['body'] = $this->parser->parse('admin2/dashboard/posts', $this->template, TRUE);
+  		$this->data['body'] = $this->parser->parse('admin/dashboard/posts', $this->template, TRUE);
 
   		$this->load->view('template', $this->data);
 }
@@ -56,7 +64,7 @@ public function view($slug) {
   public function create(){
     //  $this->output->enable_profiler(TRUE);
     if ($this->form_validation->run('post') == FALSE):
-      $this->data['body'] = $this->load->view('admin2/dashboard/create', $this->data, TRUE);
+      $this->data['body'] = $this->load->view('admin/dashboard/create', $this->data, TRUE);
       $this->load->view('template', $this->data);
     else:
      $this->load->library('Post');
@@ -67,15 +75,15 @@ public function view($slug) {
    }
 
    public function edit($post_id){
-     $this->output->enable_profiler(TRUE);
+     //$this->output->enable_profiler(TRUE);
           if ($this->form_validation->run('post') == FALSE):
      $this->data['post'] = $this->Post_model->get_post('id', $post_id);
      $this->template = array(
        'post' => $this->data['post'],
       );
-       var_dump($this->data['post']);
-       var_dump($this->template);
-     $this->data['body'] = $this->parser->parse('admin/edit', $this->template, TRUE);
+      //  var_dump($this->data['post']);
+      //  var_dump($this->template);
+     $this->data['body'] = $this->parser->parse('admin/dashboard/edit', $this->template, TRUE);
      $this->load->view('template', $this->data);
      else:
       $this->load->library('Post');

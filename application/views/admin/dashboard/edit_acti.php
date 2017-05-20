@@ -10,15 +10,11 @@
     <h1>Modifier le post</h1>
   <div class="panel-body">
         {post}
-    <form class="" action="<?= base_url('admin/posts/edit/') ?>{id}" method="post">
+    <form class="" action="<?= base_url('admin/activites/edit/') ?>{id}" method="post">
     <div class="form-group">
         <?= form_error('title') ?>
     <label for="title">Titre</label>
     <input type="text" class="form-control" name="title" value="{title}">
-    </div>
-    <div class="form-group">
-    <label for="description">Description</label>
-    <textarea class="form-control" name="description" maxlength="150">{description}</textarea>
     </div>
     <div class="form-group">
     <label for="content">Contenu de l'article</label>

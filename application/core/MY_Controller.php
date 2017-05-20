@@ -38,7 +38,7 @@ class MY_Admin_Controller extends MY_Controller {
     $this->header[0]['general'] = NULL;
     $this->header[0]['admin'] = NULL;
     $this->header[0]['preview'] = NULL;
-    $this->data['sidebar'] = $this->load->view('admin/templates/sidebar', '', TRUE);
+    //$this->data['sidebar'] = $this->load->view('admin/templates/sidebar', '', TRUE);
  	 $this->data['footer'] = $this->load->view('admin/templates/footer', '', TRUE);
 }
 

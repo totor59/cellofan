@@ -54,6 +54,7 @@
 .postgroup {
   max-height: 450px;
   overflow-y: scroll;
+  min-height: 100px !important;
 }
 .alert-info h4 {
   line-height: 27px;
@@ -67,6 +68,12 @@
 }
 .btn-newpost {
   margin-top: 20px;
+}
+.page-item {
+  height: 50px;
+}
+.page-item > .controls {
+  margin-top: 0;
 }
 /* ==========================================================================
  * Desktop

@@ -22,7 +22,7 @@ class Login extends CI_Controller {
     if($this->authentification->login($username, $password) == FALSE):
       redirect('login', 'refresh');
     else:
-      redirect('admin/home', 'refresh');
+      redirect('admin/posts', 'refresh');
     endif;
   }
 

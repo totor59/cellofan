@@ -48,6 +48,7 @@ class Page_model extends CI_Model {
     $data = array(
       'title' => $post['title'],
       'content' => $post['content'],
+      'is_active' => 0
     );
       $this->db->insert($table, $data);
   }
