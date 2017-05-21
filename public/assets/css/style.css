@@ -12,13 +12,13 @@
   * Fonts
   * ========================================================================== */
   @font-face {
-      font-family: 'LoveYaLikeASister';
-      src: url('../../third-party/fonts/LoveYaLikeASister.ttf') format("truetype");
+      font-family: 'Alegreya';
+      src: url('../../third-party/fonts/Alegreya-Regular.ttf') format("truetype");
       font-weight: normal;
   }
   @font-face {
-      font-family: 'LoveYaLikeASister';
-      src: url('../../third-party/fonts/LoveYaLikeASisterSolid.ttf') format("truetype");
+      font-family: 'Exo';
+      src: url('../../third-party/fonts/Exo-Regular.ttf') format("truetype");
       font-weight: bold;
   }
 
@@ -28,9 +28,25 @@
 .cartoon {
       border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
-.sista {
-  font-family: 'LoveYaLikeASister';
-  font-weight: bold;
+.exo {
+  font-family: 'Exo';
+}
+.red {
+  color: #d32f2f;
+}
+.separator-red{
+  border-top: 4px solid #d32f2f;
+  margin-bottom: 30px;
+}
+.orange {
+  color: #f57c00;
+}
+.separator-orange {
+  border-top: 4px solid #f57c00;
+  margin-bottom: 30px;
+}
+.blue {
+  color: #1976d2;
 }
 .basiclink,
 .basiclink:active,
@@ -55,8 +71,12 @@ html {
 }
 body {
   position: relative;
+  font-family: 'Alegreya' !important;
 }
-
+p {
+  font-size: 17px;
+line-height: 1.1;
+}
 iframe:focus {
     outline: none;
 }
@@ -76,16 +96,56 @@ iframe[seamless] {
 /* ==========================================================================
   * Sidebar
   * ========================================================================== */
+.cello-logo {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.header-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.header-card .panel {
+  display: block;
+  height: 100%;
+}
+.panel-primary {
+  background-color: red !important;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+.cello-logo,
+.header-card{
+  height: 117px;
+  }
+ }
 
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .cello-logo,
+  .header-card{
+    height: 112px;
+    }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cello-logo,
+  .header-card{
+    height: 149px;
+    }
+ }
 .sidebar {
   top: 0;
   bottom: 0;
   color: #fff;
   background-color: #000;
-  font-family: 'LoveYaLikeASister';
+  font-family: 'Exo';
 }
 .sidebar label {
   color: #000;
+}
+.padleft {
+  padding-left: 0;
 }
 .sidebar-wrapper {
   background-color: #000;
@@ -93,6 +153,8 @@ iframe[seamless] {
 .menu {
   text-align:center;
   padding: 0 20px;
+  margin-bottom: 40px;
+  padding-left: 0;
 }
 .menu li {
   list-style: none;
@@ -102,69 +164,55 @@ iframe[seamless] {
 .menu li a {
   color: #fff;
   display: block;
-  border: 1px solid #fff;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  padding: 0.5em;
-  transition: 0.5s;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.menu li {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.asso {
+  border-bottom: 4px solid #d32f2f;
+}
+.activite {
+  border-bottom: 4px solid #1976d2;
+}
+.soutien {
+  border-bottom: 4px solid #f57c00;
 }
 .menu li .asso:hover,
 .menu li .asso:active {
-  color: blue;
-  border: 1px solid blue;
-  transition: 0.5s;
+  color: #d32f2f;
+  transition: 0.3s;
 }
 .menu li .activite:hover,
 .menu li .activite:active {
-  color: red;
-  border: 1px solid red;
-  transition: 0.5s;
+  color: #1976d2;
+  transition: 0.3s;
 }
 .menu li .soutien:hover,
 .menu li .soutien:active {
-  color: orange;
-  border: 1px solid orange;
-  transition: 0.5s;
+  color: #f57c00;
+  transition: 0.3s;
 }
 .social-bar {
   height: 40px;
+  margin-bottom: 30px;
 }
-.social-bar a:focus,
-.social-bar a:visited,
 .social-bar a {
-  color: #fff;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-.social-bar i {
-  border: 1px solid #fff;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  padding: 5px;
-  transition: 0.5s;
-  width: 38px;
-}
-.social-bar .fb:active i,
-.social-bar .fb:hover i {
-  color: #3B5998;
-  border: 1px solid #3B5998;
-  transition: 0.5s;
-}
-.social-bar .tw:active i,
-.social-bar .tw:hover i {
-  color: #1DA1F2;
-  border: 1px solid #1DA1F2;
-  transition: 0.5s;
-}
-.social-bar .yt:active i,
-.social-bar .yt:hover i {
-  color: #E62117;
-  border: 1px solid #E62117;
-  transition: 0.5s;
+.social-bar a:active i,
+.social-bar a:hover i {
+font-size: 3.1em;
+transition: 0.3s;
 }
 .agenda h2 {
   text-align: center;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  font-family: 'LoveYaLikeASister';
-  font-size: 20px;
+  font-family: 'Exo';
+  font-size: 24px;
   height: 40px;
   padding-top: 5px;
 }
@@ -176,11 +224,14 @@ iframe[seamless] {
   margin: 10px 0;
   font-size: 13px;
 }
+.event {
+  margin-bottom: 35px;
+}
 .agenda .date {
   font-size: 16px;
   width: 100%;
   text-align: center;
-  margin: 0;
+  margin: 0 0 2px 0;
 }
 .contact {
   border: 1px solid #fff;
@@ -202,7 +253,8 @@ iframe[seamless] {
   padding-bottom: 50px;
 }
 .hometitle {
-  margin: 25px 0;
+  margin: 25px 0 0 0;
+  font-size: 40px;
 }
 .banner {
     margin-top: 15px;

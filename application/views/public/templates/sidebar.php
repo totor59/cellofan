@@ -24,56 +24,70 @@
 <div class="row row-eq-height">
 
   <!-- SIDEBAR -->
-  <div class="sidebar hidden-xs col-sm-4 col-lg-3">
+  <div class="sidebar hidden-xs col-sm-4 col-md-3">
     <div class="sidebar-wrapper">
-    <img class="img-responsive" src="<?= base_url('public/assets/img/logo.png')?>">
-    <ul class="menu">
-      <li><a href="<?= base_url('asso') ?>" class="basiclink asso">L'asso</a></li>
-      <li><a href="#" class="basiclink activite">Activites</a></li>
-      <li><a href="#" class="basiclink soutien">Nous soutenir</a></li>
+      <a href="<?= base_url() ?>" class="col-xs-6 col-xs-offset-3 cello-logo">
+    <img class="img-responsive" src="<?= base_url('public/assets/img/logo2.png')?>">
+  </a>
+    <ul class="menu row">
+      <li class="col-xs-9 text-right text-uppercase"><a href="<?= base_url('asso') ?>" class="basiclink asso">L'asso</a></li>
+      <li class="col-xs-9 text-right text-uppercase"><a href="<?= base_url('activites') ?>" class="basiclink activite">Activités</a></li>
+      <li class="col-xs-9 text-right text-uppercase"><a href="#" class="basiclink soutien">Nous soutenir</a></li>
     </ul>
-    <div class="social-bar">
+    <div class="social-bar row">
       <div class="col-sm-4 text-center">
-      <a href="#" class="fb"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+      <a href="#" class="fb"><i class="fa fa-facebook-square fa-3x blue" aria-hidden="true"></i></a>
     </div>
     <div class="col-sm-4 text-center">
-      <a href="#" class="tw"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a href="#" class="tw"><i class="fa fa-twitter-square fa-3x orange" aria-hidden="true"></i></a>
     </div>
     <div class="col-sm-4 text-center">
-      <a href="#" class="yt"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+      <a href="#" class="yt"><i class="fa fa-youtube-square fa-3x red" aria-hidden="true"></i></a>
     </div>
     </div>
-    <div class="agenda">
-      <h2>AGENDA</h2>
-      <ul>
-        <li>
-          <h3 class="date">JEUDI 27 SEPT. </h3>
-          <span class="excerpt">Projection Manolo a St So de 20h a 23h</span>
+    <div class="agenda row">
+      <h2 class="col-xs-8 col-xs-offset-2">AGENDA</h2>
+      <ul class="col-xs-12">
+        <li class="event col-xs-12">
+          <h3 class="col-xs-12 text-center date">JEUDI 27 SEPT. </h3>
+          <span class="excerpt col-xs-8 col-xs-offset-2 text-center">Projection Manolo a St So de 20h a 23h</span>
         </li>
-        <li>
-          <h3 class="date">JEUDI 27 SEPT. </h3>
-          <span class="excerpt">Projection Manolo a St So de 20h a 23h</span>
+        <li class="event col-xs-12">
+          <h3 class="col-xs-12 text-center date">JEUDI 27 SEPT. </h3>
+          <span class="excerpt col-xs-8 col-xs-offset-2 text-center">Projection Manolo a St So de 20h a 23h</span>
         </li>
-        <li>
-          <h3 class="date">JEUDI 27 SEPT. </h3>
-          <span class="excerpt">Projection Manolo a St So de 20h a 23h</span>
+        <li class="event col-xs-12">
+          <h3 class="col-xs-12 text-center date">JEUDI 27 SEPT. </h3>
+          <span class="excerpt col-xs-8 col-xs-offset-2 text-center">Projection Manolo a St So de 20h a 23h</span>
         </li>
-        <li>
-          <h3 class="date">JEUDI 27 SEPT. </h3>
-          <span class="excerpt">Projection Manolo a St So de 20h a 23h</span>
+        <li class="event col-xs-12">
+          <h3 class="col-xs-12 text-center date">JEUDI 27 SEPT. </h3>
+          <span class="excerpt col-xs-8 col-xs-offset-2 text-center">Projection Manolo a St So de 20h a 23h</span>
         </li>
-      </ul>
-    </div>
-    <div class="contact cartoon">
-      <ul>
-        <li>Cellofan'</li>
-        <li>44/2 rue d’Austerlitz</li>
-        <li>59000 LILLE</li>
-        <li>09 67 04 46 00</li>
-        <li>cellofan.asso@gmail.com</li>
+        <li class="event col-xs-12">
+          <h3 class="col-xs-12 text-center date">JEUDI 27 SEPT. </h3>
+          <span class="excerpt col-xs-8 col-xs-offset-2 text-center">Projection Manolo a St So de 20h a 23h</span>
+        </li>
+
       </ul>
     </div>
   </div>
   </div>
   <!-- SIDEBAR -->
-  <div class="container main-content col-xs-12 col-sm-8 col-lg-9 pull-right">
+
+  <div class="container main-content col-xs-12 col-sm-8 col-md-9 pull-right">
+    <div class="row">
+    <div class="hidden-xs col-sm-4 col-md-3 header-card">
+<div class="panel panel-primary">...</div>
+    </div>
+    <div class="hidden-xs col-sm-4 col-md-3 header-card">
+<div class="panel panel-primary">...</div>
+    </div>
+    <div class="hidden-xs col-sm-4 col-md-3 header-card">
+<div class="panel panel-primary">...</div>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-3 header-card">
+<div class="panel panel-primary">...</div>
+    </div>
+
+    </div>

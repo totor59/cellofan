@@ -31,7 +31,7 @@ public function index()	{
 			$post->button = 'fa-toggle-off green';
 		endif;
 		$post->open = null;
-		$post->publish = base_url('admin/asso/publish/'.$post->id);
+		$post->publish = base_url('admin/activites/publish/'.$post->id);
 	endforeach;
 	$this->template = array(
 	 'posts' => $this->data['posts'],

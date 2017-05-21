@@ -43,7 +43,7 @@
             </ul>
           <li class="{events}"><a href="#"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;Événements</i></a></li>
           <li class="{general}"><a href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;Général</a></li>
-          <li class="{preview}"><a href="#"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;Apercu du site</a></li>
+          <li class="{preview}"><a href="<?= base_url() ?>"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;Apercu du site</a></li>
           <li class="dropdown {admin}">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;<?= ucfirst($_SESSION['username']) ?>&nbsp;<span class="caret"></span></a>
             <ul class="dropdown-menu">

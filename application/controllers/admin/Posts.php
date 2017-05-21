@@ -31,9 +31,9 @@ class Posts extends MY_Admin_Controller {
 
   		foreach($this->data['posts'] as $post):
   			if($post->is_active == 0):
-  				$post->button = 'fa-toggle-on green';
+  				$post->button = 'fa-toggle-on red';
   			else:
-  				$post->button = 'fa-toggle-on fa-rotate-180 red';
+  				$post->button = 'fa-toggle-on fa-rotate-180 green';
   			endif;
   			$post->publish = base_url('admin/posts/publish/'.$post->id);
   			$post->view = base_url('admin/view/post/'.$post->slug);

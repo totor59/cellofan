@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Asso extends MY_Public_Controller {
-	private $table = 'cello_asso';
+class Activites extends MY_Public_Controller {
+	private $table = 'cello_activites';
 
 	public function __construct() {
 	 parent::__construct();
@@ -27,7 +27,7 @@ public function index()	{
 	 'posts' => $this->data['posts'],
 	);
 	//  var_dump($this->data['posts']);
-	$this->data['body'] = $this->parser->parse('public/asso', $this->template, TRUE);
+	$this->data['body'] = $this->parser->parse('public/activites', $this->template, TRUE);
    $this->load->view('template', $this->data);
 }
 

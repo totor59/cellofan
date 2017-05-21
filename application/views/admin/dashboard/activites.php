@@ -10,7 +10,7 @@
     <div class="list-group-item page-item col-xs-12">
       <h4 class="list-group-item-heading col-xs-8 col-md-9">{title}</h4>
       <ul class="col-xs-4 col-md-3 controls pull-right">
-        <li><a href="<?= base_url('admin/asso/edit/{id}')?>"><i class="fa fa-lg fa-pencil fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="<?= base_url('admin/activites/edit/{id}')?>"><i class="fa fa-lg fa-pencil fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="#" data-toggle="modal" data-target="#deletePost{id}"><i class="fa fa-lg fa-trash fa-fw" aria-hidden="true"></i></a></li>
         <li><a href="{publish}"><i class="fa fa-fw fa-lg {button}" aria-hidden="true"></i></a></li>
       </ul>
